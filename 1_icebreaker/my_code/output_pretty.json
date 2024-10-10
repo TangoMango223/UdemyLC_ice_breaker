@@ -1,0 +1,349 @@
+{
+    "public_identifier": "aviraj-garcha-b205381b5",
+    "profile_pic_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/person/aviraj-garcha-b205381b5/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20241008%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20241008T213512Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=179d36b81abb2f73a15d73824c4bc547b5d49de68af16e8948112f5a832d97da",
+    "background_cover_image_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/person/aviraj-garcha-b205381b5/cover?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20241008%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20241008T213512Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d09f9b508bc4c9baa5d04fc0518edb3f9c190abdfc7506603527609d635bc5b5",
+    "first_name": "Aviraj",
+    "last_name": "Garcha",
+    "full_name": "Aviraj Garcha",
+    "follower_count": null,
+    "occupation": "Logistics and Distribution at Bimbo Canada",
+    "headline": "Third year student at University of Guelph's Lang School of Business and Economics. \nThree years of supply chain and logistics experience. Hoping to grow in this industry through the use of analytics and math",
+    "summary": "Fourth year commerce student majoring in MEF-Mangement. Graduating with all CPA prerequisites and minoring in marketing and project management.\n\nMost fourth year courses are focused in qualitative finance and community engagement.\n\nCFA hopeful, looking to grow in supply chain and finance.",
+    "country": "CA",
+    "country_full_name": "Canada",
+    "city": "Brampton",
+    "state": "Ontario",
+    "experiences": [
+        {
+            "starts_at": {
+                "day": 1,
+                "month": 5,
+                "year": 2018
+            },
+            "ends_at": null,
+            "company": "Bimbo Canada",
+            "company_linkedin_profile_url": "https://ca.linkedin.com/company/bimbo-canada",
+            "company_facebook_profile_url": null,
+            "title": "Logistics and Distribution",
+            "description": "- Recording and processing depot inventory for pc data and oracle, exporting waves, closing day and importing next shipping dates order- Receive by offloading product, tagging, prioritizing and shipping orders for franchisee distribution- Loading of outbound trailers to Wingham and Owen Sound, shipping priority as well as specialty product orders for customers in time sensitive conditions with deadlines- Route auditing, and inventory tracking of all Costco product bags- Handling questions, concerns and comments from IO\u2019s and maintain healthy relationships representing Bimbo Canada- Receiving, tagging and shipping of all 3rd party specialty flatbread bread venders as well as skid dismantling and reorganization of Vachon cake product orders during the \u201cGranite\u201d transition- Overseeing and prioritization of Sobeys e-commerce online orders, as well loading onto trailer for 3rd party logistics DFS to pick up for outbound delivery.- Depot clean-up and waste disposal of return orders according to depot health & safety regulations- Created two excel spreadsheets with over 50 routes and 600 SKU's to streamline inventory and Vachon distribution",
+            "location": "Brampton, Ontario, Canada",
+            "logo_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/bimbo-canada/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20241008%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20241008T213522Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=44a1867def747f91018f249b5d208ce783f824cadf6e4386c333b4f2be2c4ad2"
+        },
+        {
+            "starts_at": {
+                "day": 1,
+                "month": 7,
+                "year": 2014
+            },
+            "ends_at": null,
+            "company": "Self-employed",
+            "company_linkedin_profile_url": null,
+            "company_facebook_profile_url": null,
+            "title": "Tutor",
+            "description": "- Started tutoring younger peers through system within school and was continuously praised by teachers and younger students- Throughout high school, I would look for opportunities to help out students who are behind or had trouble understanding concepts- Started private tutoring service during grade 9 and used my report cards as testimonials- Continued to get actual testimonials and continue to tutor in any high school course or general first year courses of any dicipline",
+            "location": null,
+            "logo_url": null
+        },
+        {
+            "starts_at": {
+                "day": 1,
+                "month": 9,
+                "year": 2017
+            },
+            "ends_at": {
+                "day": 31,
+                "month": 7,
+                "year": 2018
+            },
+            "company": "Liberal Party of Canada \u2022 Parti Lib\u00e9ral du Canada",
+            "company_linkedin_profile_url": "https://ca.linkedin.com/company/liberal-party-of-canada",
+            "company_facebook_profile_url": null,
+            "title": "Youth Constituency Council",
+            "description": "- Event planning, event leadership and direct involvement in municipal government decision making with Sonia Sidhu (MP) team.- Created and organized Petition for commencement of Canadian Diabetes awareness day in response to south Asian population disproportion.- Lead and recorded meeting minute group discussion with other constituents",
+            "location": "Brampton, Ontario, Canada",
+            "logo_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/liberal-party-of-canada/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20241008%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20241008T213522Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=d32dad92b814b2a087676c9b13fde9b4d952cb1d1ef7c1bc91d05644f97edf71"
+        }
+    ],
+    "education": [
+        {
+            "starts_at": {
+                "day": 1,
+                "month": 1,
+                "year": 2018
+            },
+            "ends_at": {
+                "day": 31,
+                "month": 12,
+                "year": 2022
+            },
+            "field_of_study": "Business/Managerial Economics",
+            "degree_name": "Bachelor of Commerce - BCom",
+            "school": "Lang School of Business and Economics - University of Guelph",
+            "school_linkedin_profile_url": null,
+            "school_facebook_profile_url": null,
+            "description": "Deans Honor List Winter 2019 - Present (Summer Semesters Included)Essential Worker + Full time University StudentEntry Scholarship",
+            "logo_url": "https://media-exp1.licdn.com/dms/image/C4E0BAQF94PtUOYt5xg/company-logo_100_100/0/1560197715170?e=1636588800&v=beta&t=Z5gdjh8WqKlC1jiHsDuNVy0vAlnztQ0pgTULKtwhWrU",
+            "grade": null,
+            "activities_and_societies": null
+        }
+    ],
+    "languages": [
+        "English",
+        "Punjabi",
+        "Hindi",
+        "Urdu",
+        "French"
+    ],
+    "languages_and_proficiencies": [
+        {
+            "name": "English",
+            "proficiency": "None"
+        },
+        {
+            "name": "Punjabi",
+            "proficiency": "None"
+        },
+        {
+            "name": "Hindi",
+            "proficiency": "None"
+        },
+        {
+            "name": "Urdu",
+            "proficiency": "None"
+        },
+        {
+            "name": "French",
+            "proficiency": "None"
+        }
+    ],
+    "accomplishment_organisations": [],
+    "accomplishment_publications": [],
+    "accomplishment_honors_awards": [],
+    "accomplishment_patents": [],
+    "accomplishment_courses": [
+        {
+            "name": "Calculus II",
+            "number": "MATH 1210"
+        },
+        {
+            "name": "Calculus for Life Science I",
+            "number": "MATH 1080"
+        },
+        {
+            "name": "Linear Algebra I",
+            "number": "MATH 1160"
+        },
+        {
+            "name": "Operations Mangement",
+            "number": "FARE 3310`"
+        },
+        {
+            "name": "Physics for Life Science I",
+            "number": "PHYS 1070"
+        },
+        {
+            "name": "Physics for Life Science II",
+            "number": "PHYS 1080"
+        }
+    ],
+    "accomplishment_projects": [],
+    "accomplishment_test_scores": [],
+    "volunteer_work": [],
+    "certifications": [
+        {
+            "starts_at": {
+                "day": 1,
+                "month": 6,
+                "year": 2021
+            },
+            "ends_at": null,
+            "name": "Bloomberg Marketing Concepts",
+            "license_number": "160019727778",
+            "display_source": "portal.bloombergforeducation.com",
+            "authority": "Bloomberg LP",
+            "url": "https://portal.bloombergforeducation.com/certificates/download"
+        },
+        {
+            "starts_at": {
+                "day": 1,
+                "month": 10,
+                "year": 2016
+            },
+            "ends_at": null,
+            "name": "Customer Service Certificate",
+            "license_number": null,
+            "display_source": null,
+            "authority": "Peel District School Board",
+            "url": null
+        },
+        {
+            "starts_at": null,
+            "ends_at": null,
+            "name": "Standard First Aid, CPR and AED",
+            "license_number": null,
+            "display_source": null,
+            "authority": "City of Brampton",
+            "url": null
+        }
+    ],
+    "connections": 273,
+    "people_also_viewed": [
+        {
+            "link": "https://ca.linkedin.com/in/jananan-nadesh-9a1ba6158",
+            "name": "Jananan Nadesh",
+            "summary": "Student at University of Guelph",
+            "location": "Guelph, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/herman-douglas-jougbou-nkala-27925b134",
+            "name": "Herman Douglas JOUGBOU NKALA",
+            "summary": "Technicien assurance qualit\u00e9 chez C.H. Guenther & Son",
+            "location": "Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/kavan-gill-07b2b5182",
+            "name": "Kavan Gill",
+            "summary": "Student at University of Guelph",
+            "location": "Kitchener, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/joanne-kennedy-bb07897a",
+            "name": "Joanne Kennedy",
+            "summary": "Accounting Professional at Truckstop.com Canada Ltd.",
+            "location": "Newmarket, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/annick-belisle-1927b4122",
+            "name": "Annick Belisle",
+            "summary": "Sales Coordinator at Bimbo Canada",
+            "location": "Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/nerisma",
+            "name": "Steinland Nerisma",
+            "summary": "Mechanical Designer at Neoglacia Inc.",
+            "location": "Greater Toronto Area, Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/amrit-khabra-300b3a160",
+            "name": "Amrit Khabra",
+            "summary": "Office Administrator at Divine Eye Care",
+            "location": "Brampton, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/neha-grewal-3262b8179",
+            "name": "Neha Grewal",
+            "summary": "Student at Wilfrid Laurier University",
+            "location": "Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/anusha-krishnani-265aa7187",
+            "name": "Anusha Krishnani",
+            "summary": "Student at Wilfrid Laurier University",
+            "location": "Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/jivan-jagpal-0507a7b6",
+            "name": "Jivan Jagpal",
+            "summary": "Supply Chain Planner at C.H. Guenther & Son, Inc.",
+            "location": "Vancouver, BC"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/pr-tv-entertainment-72b187207",
+            "name": "PR TV Entertainment",
+            "summary": "Television Broadcasting",
+            "location": "Cambridge, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/toddnewstead",
+            "name": "Todd Newstead",
+            "summary": "Director, Sales at Bimbo Canada",
+            "location": "Greater Toronto Area, Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/gabriel-bolduc-dodier-9155b4154",
+            "name": "Gabriel Bolduc-Dodier",
+            "summary": "Inventory Supervisor at Martin-Brower of Canada Co.",
+            "location": "Montreal, QC"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/sanampreet-kaur-8877131b4",
+            "name": "Sanampreet Kaur",
+            "summary": "Student at Seneca College",
+            "location": "Toronto, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/mohammad-adeel-hossenbaccus-866a8416b",
+            "name": "Mohammad Adeel Hossenbaccus",
+            "summary": "Graduate of Humber college",
+            "location": "Mississauga, ON"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/manay-olosan-306a741aa",
+            "name": "Manay Olosan",
+            "summary": "Shipping Receiving Specialist at C.H. Guenther & Son",
+            "location": "Richmond, BC"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/manjot-mander-041861149",
+            "name": "Manjot Mander",
+            "summary": "Operations Co-op at PepsiCo",
+            "location": "Delta, BC"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/maksymilianmaka",
+            "name": "Maksymilian Maka",
+            "summary": "Silicon Validation Engineering Intern at Synopsys Inc",
+            "location": "Canada"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/glenn-cericos-514535162",
+            "name": "Glenn Cericos",
+            "summary": "Millwright",
+            "location": "Vancouver, BC"
+        },
+        {
+            "link": "https://ca.linkedin.com/in/tricia-jackson-0495981b8",
+            "name": "Tricia Jackson",
+            "summary": "Lifestyle Presentor, Consultant, Bellwether and Community Leasing Agent @ CLV Group - presenting properties and provided services to potential tenants in a positive way",
+            "location": "Toronto, ON"
+        }
+    ],
+    "recommendations": [],
+    "activities": [
+        {
+            "title": "What a way to graduate and wrap up my final semester at The Lang School of Business and Economics - University of Guelph! I am honoured to have\u2026",
+            "link": "https://www.linkedin.com/signup/cold-join",
+            "activity_status": "Liked by Aviraj Garcha"
+        },
+        {
+            "title": "In a competition of over 400 bright and driven students and 9 challenging problem statements, I\u2019m pretty proud to say that my team and I came in\u2026",
+            "link": "https://www.linkedin.com/signup/cold-join",
+            "activity_status": "Liked by Aviraj Garcha"
+        },
+        {
+            "title": "I am super excited to share that I have accepted a 13-month co-op position with Cisco Meraki in San Francisco, California as a Product Design Intern\u2026",
+            "link": "https://www.linkedin.com/signup/cold-join",
+            "activity_status": "Liked by Aviraj Garcha"
+        }
+    ],
+    "similarly_named_profiles": [],
+    "articles": [],
+    "groups": [],
+    "skills": [],
+    "inferred_salary": {
+        "min": null,
+        "max": null
+    },
+    "gender": "male",
+    "birth_date": null,
+    "industry": null,
+    "extra": {
+        "github_profile_id": null,
+        "twitter_profile_id": null,
+        "facebook_profile_id": null
+    },
+    "interests": [],
+    "personal_emails": [],
+    "personal_numbers": []
+}

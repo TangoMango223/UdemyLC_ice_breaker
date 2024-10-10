@@ -1,7 +1,16 @@
+# LangChain and LangGraph
 langchain
 langchain-openai
-langchain-pinecone
+langchain-pinecone # Online free VectorStore
 langchain-community
-python-dotenv
+langgraph
 langchainhub
+
+# Other stuff
+python-dotenv
+
 black
+
+# PDF handling
+pypdf # ingest PDFs
+faiss-cpu # only need CPU, creates local vector store

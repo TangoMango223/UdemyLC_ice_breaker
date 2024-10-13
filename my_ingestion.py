@@ -33,7 +33,7 @@ embeddings = OpenAIEmbeddings(model= "text-embedding-3-small")
 def ingest_docs():
     
     # Loader - includes the path
-    loader = ReadTheDocsLoader("/Users/christine/VSCode/Udemy_LC_Icebreaker_1/UdemyLC_ice_breaker/3_NewAssistant/api.python.langchain.com/en/latest")
+    loader = ReadTheDocsLoader("/Users/christine/VSCode/Udemy_LC_Icebreaker_1/UdemyLC_ice_breaker/3_NewAssistant/documentation-helper-main/langchain-docs/langchain.readthedocs.io/en/latest")
     
     raw_documents = loader.load()
     
@@ -66,7 +66,6 @@ def ingest_docs():
 # I need to delete all the records in the Pinecone Store.
 
 
-
 # def delete_all_entries():
 #     # Initialize Pinecone with your API key and environment
 #     pc = Pinecone(api_key=os.environ("PINECONE_API_KEY"), environment="us-east-1")
@@ -75,13 +74,10 @@ def ingest_docs():
 #     index.delete(delete_all=True, namespace='')
 
 
-
-
-
-
 # Run these functions:
 
 # Ingest documents
 # ingest_docs()
 
-# delete_all_entries()
+
+# ---- RAG -----

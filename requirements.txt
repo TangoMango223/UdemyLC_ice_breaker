@@ -38,3 +38,11 @@ langsmith
 pinecone
 langchain-pinecone
 pillow
+
+# Needed to fix bugs like clearing entire VecStore
+google.api
+gcloud
+google-api-python-client
+protoc-gen-openapiv2
+grpcio
+grpcio-tools

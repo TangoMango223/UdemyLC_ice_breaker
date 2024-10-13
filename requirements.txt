@@ -14,3 +14,27 @@ black
 # PDF handling
 pypdf # ingest PDFs
 faiss-cpu # only need CPU, creates local vector store
+
+# For AI assistant project in section 3_NewAssistant
+beautifulsoup4
+black
+tiktoken
+openai
+unstructured
+nltk
+fastapi
+jinja2
+uvicorn
+streamlit
+streamlit-chat
+tqdm
+isort
+langchainhub
+firecrawl-py
+langchain
+langchain-openai
+langchain-community
+langsmith
+pinecone
+langchain-pinecone
+pillow

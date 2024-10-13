@@ -4,6 +4,8 @@
 
 # ---------- Import Statements ----------
 
+import os
+
 # This chain's purpose is for LangChain to retrieve docs from VectorStores
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain_pinecone import PineconeVectorStore
@@ -13,6 +15,10 @@ from langchain_openai import OpenAIEmbeddings # handle word embeddings
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
+# LangSmith activation for tracing:
+from langsmith import Client
+from langsmith import traceable
+
 # Need LangChain Hub - download dynamically augmentation prompts (templates) 
 from langchain import hub
 from langchain_openai import OpenAIEmbeddings
@@ -20,10 +26,22 @@ from langchain_openai import OpenAIEmbeddings
 # Combine or stuffing chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
+# Load environment:
+from dotenv import load_dotenv
+
+# Load the .env file
+load_dotenv()
+
+
 
 # Take context from VecStore, combine/stuff, (Retrieve) then give to the LLM for generation
 
 INDEX_NAME = "langchain-doc-index"
+
+# --- Check Tracing on LangSmith ----
+# client = Client(api_key=os.environ["LANGCHAIN_API_KEY"])
+
+
 
 # ----------- Let's Begin! -----------
 
@@ -64,7 +82,16 @@ def run_llm(query):
     
     # invoke the LLM now to answer the question:
     result = qa.invoke(input = {"input": query})
-    return result
+    
+    
+    # Create new dictionary - new mapping
+    new_result = {
+        "query": result["input"],
+        "result": result["answer"],
+        "source_documents": result["context"]
+    }
+    
+    return new_result
 
 # Common Mistake:
 # Establish the LLM, embeddings, and docsearch (ref to PineCone)
@@ -72,5 +99,14 @@ def run_llm(query):
 
 # Step 2 - Call it
 if __name__ == "__main__":
-    res = run_llm(query = "What is a LangChain Chain?")
+    res = run_llm(query = "What is LangChain?")
     print(res)
+    
+    
+
+# for streamlit
+# Changing names:
+# Under result, we have several keys...
+# input -> query
+# context -> source documents
+# answer -> result

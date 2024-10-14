@@ -55,3 +55,4 @@ watchdog
 
 # FireCrawler
 firecrawl-py
+callbacks

@@ -19,7 +19,7 @@
             "program": "/Users/christine/VSCode/Udemy_LC_Icebreaker_1/UdemyLC_ice_breaker/.venv/bin/streamlit",  // Path to the Streamlit executable in your venv
             "console": "integratedTerminal",
             "args": [
-                "run", "/Users/christine/VSCode/Udemy_LC_Icebreaker_1/UdemyLC_ice_breaker/my_main.py"  // Pass the 'run' command and script path
+                "run", "/Users/christine/VSCode/Udemy_LC_Icebreaker_1/UdemyLC_ice_breaker/3_NewAssistant/documentation-helper-main/my_main.py"  // Pass the 'run' command and script path
             ],
             "env": {
                 "PYTHONUNBUFFERED": "1"

@@ -1,4 +1,4 @@
-# LangChain and LangGraph
+# ----- LangChain and LangGraph -----
 langchain
 langchain-openai
 langchain-pinecone # Online free VectorStore
@@ -8,7 +8,6 @@ langchainhub
 
 # Other stuff
 python-dotenv
-
 black
 
 # PDF handling
@@ -41,7 +40,6 @@ langsmith
 # Unique ID
 uuid
 
-
 # Needed to fix bugs like clearing entire VecStore
 google.api
 gcloud
@@ -54,3 +52,6 @@ grpcio-tools
 streamlit
 streamlit-chat
 watchdog
+
+# FireCrawler
+firecrawl-py

@@ -8,6 +8,8 @@ import os
 
 # This chain's purpose is for LangChain to retrieve docs from VectorStores
 from langchain.chains.retrieval import create_retrieval_chain
+from langchain.chains.history_aware_retriever import create_history_aware_retriever
+
 from langchain_pinecone import PineconeVectorStore
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import CharacterTextSplitter
@@ -46,44 +48,28 @@ INDEX_NAME = "langchain-doc-index"
 # ----------- Let's Begin! -----------
 
 # STEP 1 - create the LLM call
-def run_llm(query):
-    
-    # Embeddings
-    embedddings = OpenAIEmbeddings(model = "text-embedding-3-small")
-    
-    # Doc Search as retriever
-    docsearch = PineconeVectorStore(index_name = INDEX_NAME, embedding= embedddings)
-    
-    # Chat - strict temp control
-    chat = ChatOpenAI(verbose = True, temperature = 0)
-    
-    
-    # STEP 2 - Download retrieval-qa chat, which helps with RETRIEVAL STEP
-    # Source: https://smith.langchain.com/hub/langchain-ai/retrieval-qa-chat
-    # What does LC do under the hood?
-    
-    # This is the "template" we saw on LC's website
+def run_llm(query: str, chat_history):
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    docsearch = PineconeVectorStore(index_name=INDEX_NAME, embedding=embeddings)
+    chat = ChatOpenAI(verbose=True, temperature=0)
+
+    rephrase_prompt = hub.pull("langchain-ai/chat-langchain-rephrase")
+
     retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
-    
-    # Do the stuffing step.
-    # Relevant documents will be pulled:
     stuff_documents_chain = create_stuff_documents_chain(chat, retrieval_qa_chat_prompt)
+
+    # The non-last retriever must be called as a function, .as_retriever()
+    history_aware_retriever = create_history_aware_retriever(
+        llm=chat, retriever=docsearch.as_retriever(), prompt=rephrase_prompt
+    )
     
-    # Augmentation with the documents, from the stuffing step
-    
-    # Now, we perform the retrieval
+    # The last retreiver must be called as a method, not as a function.
     qa = create_retrieval_chain(
-        retriever=docsearch.as_retriever(), combine_docs_chain= stuff_documents_chain)
-    
-    # Combine docs chain - we have operations to do optimizations later, like summarization
-    # i.e. one massive string, some filtering, etc.
-    # That's why it's called combining, so there's optional params for post-processing
-    
-    
-    # invoke the LLM now to answer the question:
-    result = qa.invoke(input = {"input": query})
-    
-    
+        retriever=history_aware_retriever, combine_docs_chain=stuff_documents_chain
+    )
+
+    # Invoke - make sure to pass chat_history.
+    result = qa.invoke(input={"input": query, "chat_history": chat_history})
     # Create new dictionary - new mapping
     new_result = {
         "query": result["input"],
@@ -98,13 +84,10 @@ def run_llm(query):
 # These 3 objects will tie together and needed for stuff_chain and create_retrieval_chain
 
 # Step 2 - Call it
-if __name__ == "__main__":
-    res = run_llm(query = "What is LangChain?")
-    print(res)
-    
-    
-
-# for streamlit
+# if __name__ == "__main__":
+#     res = run_llm(query = "What is LangChain?", chat_history)
+#     print(res)
+# for streamlit:
 # Changing names:
 # Under result, we have several keys...
 # input -> query

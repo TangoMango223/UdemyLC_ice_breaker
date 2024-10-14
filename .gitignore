@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Ignore API Key:
-/Users/christine/VSCode/Udemy_LC_Icebreaker_1/UdemyLC_ice_breaker/3_NewAssistant/documentation-helper-main/.streamlit/secrets.toml 
+.streamlit/

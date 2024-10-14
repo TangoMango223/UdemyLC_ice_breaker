@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 langchain-docs/
 
-# Ignore streamlit:
-.streamlit/
+# Ignore API Key:
+.streamlit/secrets.toml

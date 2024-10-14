@@ -19,7 +19,7 @@ from linkedin import scrape_linkedin_profile
 
 # Summary Template
 summary_template = """
-Given the Linkedin information {information} about a person, I want you to create:
+Given the Linkedin information {information} about this person, I want you to create:
 1. a short summary
 2. two interesting facts about them.
 3. suggested career paths for this individual.

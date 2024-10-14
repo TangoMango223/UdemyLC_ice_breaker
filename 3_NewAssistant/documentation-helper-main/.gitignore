@@ -161,4 +161,4 @@ cython_debug/
 langchain-docs/
 
 # Ignore streamlit:
-.streamlit/secrets.toml
+secrets.toml

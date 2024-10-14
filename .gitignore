@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Ignore API Key:
-.streamlit/secrets.toml
+secrets.toml

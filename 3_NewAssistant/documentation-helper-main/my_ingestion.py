@@ -82,54 +82,131 @@ def ingest_docs():
 
 # ----- Ingestion with FireCrawler - ---
 
-# from langchain_community.document_loaders import FireCrawlLoader
+from langchain_community.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import FireCrawlLoader
 
-# def ingest_docs2() -> None:
-#     langchain_documents_base_urls = [
-#         "https://python.langchain.com/v0.2/docs/integrations/chat/",
-#         "https://python.langchain.com/v0.2/docs/integrations/llms/",
-#         "https://python.langchain.com/v0.2/docs/integrations/text_embedding/",
-#         "https://python.langchain.com/v0.2/docs/integrations/document_loaders/",
-#         "https://python.langchain.com/v0.2/docs/integrations/document_transformers",
-#         "https://python.langchain.com/v0.2/docs/integrations/vectorstores/",
-#         "https://python.langchain.com/v0.2/docs/integrations/retrievers/",
-#         "https://python.langchain.com/v0.2/docs/integrations/tools/",
-#         "https://python.langchain.com/v0.2/docs/integrations/stores/",
-#         "https://python.langchain.com/v0.2/docs/integrations/llm_caching/",
-#         "https://python.langchain.com/v0.2/docs/integrations/graphs/",
-#         "https://python.langchain.com/v0.2/docs/integrations/memory/",
-#         "https://python.langchain.com/v0.2/docs/integrations/callbacks/",
-#         "https://python.langchain.com/v0.2/docs/concepts/",
-#     ]
+def ingest_docs2() -> None:
+    langchain_documents_base_urls = [
+        "https://python.langchain.com/v0.2/docs/integrations/chat/",
+        "https://python.langchain.com/v0.2/docs/integrations/llms/",
+        "https://python.langchain.com/v0.2/docs/integrations/text_embedding/",
+        "https://python.langchain.com/v0.2/docs/integrations/document_loaders/",
+        "https://python.langchain.com/v0.2/docs/integrations/document_transformers",
+        "https://python.langchain.com/v0.2/docs/integrations/vectorstores/",
+        "https://python.langchain.com/v0.2/docs/integrations/retrievers/",
+        "https://python.langchain.com/v0.2/docs/integrations/tools/",
+        "https://python.langchain.com/v0.2/docs/integrations/stores/",
+        "https://python.langchain.com/v0.2/docs/integrations/llm_caching/",
+        "https://python.langchain.com/v0.2/docs/integrations/graphs/",
+        "https://python.langchain.com/v0.2/docs/integrations/memory/",
+        "https://python.langchain.com/v0.2/docs/integrations/callbacks/",
+        "https://python.langchain.com/v0.2/docs/concepts/",
+    ]
     
-#     # Example case:
-#     langchain_documents_base_urls2 = [langchain_documents_base_urls[0]]
+    # Example case:
+    langchain_documents_base_urls2 = [langchain_documents_base_urls[0]]
     
-#     #For loop:
-#     for url in langchain_documents_base_urls2:
-#         print(f"FireCrawling {url=}")
+    all_docs = []
+    for url in langchain_documents_base_urls2:
+        print(f"FireCrawling {url=}")
         
-#         # Only scrape this info
-#         loader = FireCrawlLoader(
-#             url=url, # see urls from above
-#             mode="crawl", # crawl is more extensive printing than scrape
-#             params = {
-#                 "limits": 5,
-#                 }
-#         )
+        # Use WebBaseLoader instead of FireCrawlLoader
+        loader = WebBaseLoader(url)
         
-#         docs = loader.load()
-#         print(docs)
-#         # print(f"Going to add {len(docs)} documents to Pinecone")
-#         # PineconeVectorStore.from_documents(
-#         #     docs, embeddings, index_name="firecrawl-index"
-#         # )
-#         # print(f"****Loading {url}* to vectorstore done ***")
+        docs = loader.load()
+        print(f"Loaded {len(docs)} documents from {url}")
+        all_docs.extend(docs)
         
-        
-        
-# # Call this:
-# if __name__ == "__main__":
-#     a = ingest_docs2()
+    print(f"Total documents loaded: {len(all_docs)}")
+    return all_docs
     
+    # Uncomment these lines when you're ready to add to Pinecone
+    # print(f"Going to add {len(all_docs)} documents to Pinecone")
+    # PineconeVectorStore.from_documents(
+    #     all_docs, embeddings, index_name="firecrawl-index"
+    # )
+    # print("****Loading to vectorstore done ***")
+
+def ingest_docs3() -> None:
+    langchain_documents_base_urls = [
+        "https://python.langchain.com/v0.2/docs/integrations/chat/",
+        "https://python.langchain.com/v0.2/docs/integrations/llms/",
+        "https://python.langchain.com/v0.2/docs/integrations/text_embedding/",
+        "https://python.langchain.com/v0.2/docs/integrations/document_loaders/",
+        "https://python.langchain.com/v0.2/docs/integrations/document_transformers",
+        "https://python.langchain.com/v0.2/docs/integrations/vectorstores/",
+        "https://python.langchain.com/v0.2/docs/integrations/retrievers/",
+        "https://python.langchain.com/v0.2/docs/integrations/tools/",
+        "https://python.langchain.com/v0.2/docs/integrations/stores/",
+        "https://python.langchain.com/v0.2/docs/integrations/llm_caching/",
+        "https://python.langchain.com/v0.2/docs/integrations/graphs/",
+        "https://python.langchain.com/v0.2/docs/integrations/memory/",
+        "https://python.langchain.com/v0.2/docs/integrations/callbacks/",
+        "https://python.langchain.com/v0.2/docs/concepts/",
+    ]
     
+    # Example case:
+    langchain_documents_base_urls2 = [langchain_documents_base_urls[0]]
+    
+    all_docs = []
+    for url in langchain_documents_base_urls2:
+        print(f"FireCrawling {url=}")
+        
+        # Use FireCrawlLoader
+        loader = FireCrawlLoader(
+            url=url,
+            mode="crawl",
+            # max_depth=2,
+            # max_requests=10,
+            limit = 3,
+            ignore_robots_txt=False,
+            timeout=30
+        )
+        
+        docs = loader.load()
+        print(f"Loaded {len(docs)} documents from {url}")
+        all_docs.extend(docs)
+        
+    print(f"Total documents loaded: {len(all_docs)}")
+    return all_docs
+    
+    # Uncomment these lines when you're ready to add to Pinecone
+    # print(f"Going to add {len(all_docs)} documents to Pinecone")
+    # PineconeVectorStore.from_documents(
+    #     all_docs, embeddings, index_name="firecrawl-index"
+    # )
+    # print("****Loading to vectorstore done ***")
+
+# Add this import at the top of the file
+from firecrawler import FireCrawler
+
+# def ingest_docs4() -> None:
+#     url = "https://python.langchain.com/v0.2/docs/integrations/chat/"
+    
+#     print(f"FireCrawling {url=}")
+    
+#     # Use FireCrawler directly
+#     crawler = FireCrawler(
+#         url=url,
+#         mode="crawl",
+#         limit=3,
+#         max_depth=2,
+#         ignore_robots_txt=False,
+#         timeout=30000  # timeout in milliseconds
+#     )
+    
+#     results = crawler.crawl()
+    
+#     print(f"Crawled {len(results)} pages")
+    
+#     for result in results:
+#         print(f"URL: {result.url}")
+#         print(f"Title: {result.title}")
+#         print(f"Content length: {len(result.content)}")
+#         print("---")
+    
+#     return results
+
+# Call this:
+if __name__ == "__main__":
+    check_docs = ingest_docs4()

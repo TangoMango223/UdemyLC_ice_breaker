@@ -144,41 +144,35 @@ def ingest_docs3() -> None:
         "https://python.langchain.com/v0.2/docs/integrations/callbacks/",
         "https://python.langchain.com/v0.2/docs/concepts/",
     ]
-    
-    # Example case:
-    langchain_documents_base_urls2 = [langchain_documents_base_urls[0]]
-    
-    all_docs = []
-    for url in langchain_documents_base_urls2:
+    # all_docs = []
+    # Crawl 1 to test:
+    all_docs = langchain_documents_base_urls[0]
+    for url in langchain_documents_base_urls:
         print(f"FireCrawling {url=}")
-        
-        # Use FireCrawlLoader
         loader = FireCrawlLoader(
             url=url,
             mode="crawl",
-            # max_depth=2,
-            # max_requests=10,
-            limit = 3,
-            ignore_robots_txt=False,
-            timeout=30
+            params={
+                "crawlerOptions": {"limit": 5},
+                "pageOptions": {"onlyMainContent": True},
+                "wait_until_done": True,
+            },
         )
-        
         docs = loader.load()
         print(f"Loaded {len(docs)} documents from {url}")
         all_docs.extend(docs)
-        
+    
     print(f"Total documents loaded: {len(all_docs)}")
     return all_docs
-    
-    # Uncomment these lines when you're ready to add to Pinecone
-    # print(f"Going to add {len(all_docs)} documents to Pinecone")
-    # PineconeVectorStore.from_documents(
-    #     all_docs, embeddings, index_name="firecrawl-index"
-    # )
-    # print("****Loading to vectorstore done ***")
+
+# Uncomment these lines when you're ready to add to Pinecone
+# print(f"Going to add {len(all_docs)} documents to Pinecone")
+# PineconeVectorStore.from_documents(
+#     all_docs, embeddings, index_name="firecrawl-index"
+# )
+# print("****Loading to vectorstore done ***")
 
 # Add this import at the top of the file
-from firecrawler import FireCrawler
 
 # def ingest_docs4() -> None:
 #     url = "https://python.langchain.com/v0.2/docs/integrations/chat/"
@@ -209,4 +203,4 @@ from firecrawler import FireCrawler
 
 # Call this:
 if __name__ == "__main__":
-    check_docs = ingest_docs4()
+    check_docs = ingest_docs3()

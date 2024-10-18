@@ -20,6 +20,10 @@ from langchain_pinecone import PineconeVectorStore
 # Add Streamlit import
 import streamlit as st
 
+
+# Firecrawl
+from firecrawl import FirecrawlApp
+
 # Take index_name
 # from consts import INDEX_NAME
 from pinecone.grpc import PineconeGRPC as Pinecone
@@ -144,26 +148,48 @@ def ingest_docs3() -> None:
         "https://python.langchain.com/v0.2/docs/integrations/callbacks/",
         "https://python.langchain.com/v0.2/docs/concepts/",
     ]
-    # all_docs = []
-    # Crawl 1 to test:
-    all_docs = langchain_documents_base_urls[0]
-    for url in langchain_documents_base_urls:
-        print(f"FireCrawling {url=}")
-        loader = FireCrawlLoader(
-            url=url,
-            mode="crawl",
-            params={
-                "crawlerOptions": {"limit": 5},
-                "pageOptions": {"onlyMainContent": True},
-                "wait_until_done": True,
-            },
-        )
-        docs = loader.load()
-        print(f"Loaded {len(docs)} documents from {url}")
-        all_docs.extend(docs)
     
-    print(f"Total documents loaded: {len(all_docs)}")
-    return all_docs
+    
+    URL_TO_SCRAPE = "https://python.langchain.com/v0.2/docs/concepts/"
+    
+    api_token = os.environ["FIRECRAWL_API_KEY"]
+    
+    app = FirecrawlApp(api_key=api_token)
+    
+    scrape_status = app.scrape_url(
+        URL_TO_SCRAPE,
+        params = {
+            "formats": ["markdown"],
+            "onlyMainContent": True,
+        }
+    )
+  
+  
+    print(scrape_status)
+    
+  
+  
+  
+#    # all_docs = []
+#     # # Crawl 1 to test:
+#     # all_docs = langchain_documents_base_urls[0]
+#     # for url in langchain_documents_base_urls:
+#     #     print(f"FireCrawling {url=}")
+#     #     loader = FireCrawlLoader(
+#     #         url=url,
+#     #         mode="crawl",
+#     #         params={
+#     #             "crawlerOptions": {"limit": 5},
+#     #             "pageOptions": {"onlyMainContent": True},
+#     #             "wait_until_done": True,
+#     #         },
+#     #     )
+#     #     docs = loader.load()
+#     #     print(f"Loaded {len(docs)} documents from {url}")
+#     #     all_docs.extend(docs)
+    
+#     print(f"Total documents loaded: {len(all_docs)}")
+#     return all_docs
 
 # Uncomment these lines when you're ready to add to Pinecone
 # print(f"Going to add {len(all_docs)} documents to Pinecone")
